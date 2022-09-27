@@ -53,6 +53,9 @@ class League(BaseApi):
 		for roster in rosters:
 			wins = roster["settings"]["wins"]
 			points = roster["settings"]["fpts"]
+			decimal_points = roster["settings"]["fpts_decimal"]
+			points = points + (decimal_points * .01)
+
 			name = roster["owner_id"]
 			losses = roster["settings"]["losses"]
 			if name is not None:
@@ -146,3 +149,4 @@ class League(BaseApi):
 
 	def get_rosters_players(self):
 		pass
+
