@@ -72,7 +72,7 @@ class League(BaseApi):
 
 		clean_standings_list = []
 		for item in roster_standings_list:
-			clean_standings_list.append((item[5], str(item[0]), str(item[1]), str(item[2]), str(item[4]),))
+			clean_standings_list.append((item[5], str(item[0]), str(item[1]), str(item[2]), str(item[3]), str(item[4])))
 		
 		return clean_standings_list
 
